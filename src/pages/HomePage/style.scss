@@ -6,7 +6,7 @@
   padding-top: 31vh;
   // 输入
   .input-row {
-    margin : 20px 0;
+    margin : 10px 0;
     .input-wrap {
       margin-top: 5px;
       padding: 5px 10px;
@@ -60,11 +60,12 @@
     align-items: center;
     position: relative;
     width: 88%;
-    height: 60vh;
+    height: 50vh;
     margin: auto;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    justify-content: space-around;
     // 头像
     .avatar {
       margin: 16px 0 2px;

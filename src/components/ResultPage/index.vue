@@ -16,8 +16,8 @@
       >
         再来一次
       </BeginButton>
-      <div style="widtj:60%;marginTop:40px">
-        <img style="widtj:100%" src="../../assets/code.png" alt="">
+      <div style="width:60%;marginTop:40px">
+        <img style="width:100%" src="../../assets/code.png" alt="">
       </div>
       <!-- <BeginButton
         :propsStyle="{ backgroundColor: '#fd5b96', color: '#fff' }"
