@@ -158,7 +158,7 @@ export default {
         .then((res) => {
           if (res.data.state) {
             this.commitPlayGame(type);
-            this.$router.push('/quiz');
+            this.$router.replace('/quiz');
           } else {
             this.showPromptBox(res.data.msg);
           }

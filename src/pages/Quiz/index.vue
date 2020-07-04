@@ -292,7 +292,7 @@ export default {
   created() {
     // 避免直接通过url访问这个页面
     if (!this.gameMode) {
-      this.$router.push('/');
+      this.$router.replace('/');
     }
     this.resetData();
   },

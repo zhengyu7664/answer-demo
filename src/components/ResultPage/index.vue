@@ -104,7 +104,7 @@ export default {
         });
     },
     goHomeWithMessage(message) {
-      this.$router.push({ name: 'HomePage', params: { message } });
+      this.$router.replace({ name: 'HomePage', params: { message } });
     },
     ...mapMutations({
       commitPlayGame: PLAY_GAME
