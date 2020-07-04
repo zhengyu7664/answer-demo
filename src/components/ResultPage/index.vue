@@ -1,8 +1,8 @@
 <template>
   <transition appear name="slide-up">
     <div class="result-page">
-      <router-link to="/">
-        <img src="../../assets/icon/close.svg" class="back-btn" />
+      <router-link >
+        <img @click="backHandle" src="../../assets/icon/close.svg" class="back-btn" />
       </router-link>
       <img class="result-img" :src="iconSrc" alt="result">
       <h1 class="title">{{ title }}</h1>
@@ -16,9 +16,9 @@
       >
         再来一次
       </BeginButton>
-      <div style="width:60%;marginTop:40px">
+      <!-- <div style="width:60%;marginTop:40px">
         <img style="width:100%" src="../../assets/code.png" alt="">
-      </div>
+      </div> -->
       <!-- <BeginButton
         :propsStyle="{ backgroundColor: '#fd5b96', color: '#fff' }"
       >
@@ -71,6 +71,9 @@ export default {
     ])
   },
   methods: {
+    backHandle(){
+      this.$router.replace('/');
+    },
     play() {
       const type = this.previousGameMode;
       switch (type) {
