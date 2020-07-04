@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-07-03 23:10:45
- * @LastEditTime: 2020-07-04 14:38:31
+ * @LastEditTime: 2020-07-04 15:01:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \quiz-game\config\index.js
@@ -58,7 +58,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: '/answer-demo/',
 
     /**
      * Source Maps
