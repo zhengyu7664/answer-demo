@@ -1,10 +1,18 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-04 14:00:48
+ * @LastEditTime: 2020-07-04 16:27:00
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \ANSWER\src\components\RulesPage\index.vue
+--> 
 <template>
   <transition appear name="slide-fade">
     <div class="rules-container">
       <header class="header">
-        <router-link to="/">
-          <img class="close-icon" src="../../assets/icon/close.svg" alt="close">
-        </router-link>
+        <!-- <router-link > -->
+          <img @click="backHandle" class="close-icon" src="../../assets/icon/close.svg" alt="close">
+        <!-- </router-link> -->
         <h1 class="heading">游戏规则</h1>
       </header>
       <div class="content">
@@ -81,7 +89,12 @@
 
 <script>
 export default {
-  name: 'RulesPage'
+  name: 'RulesPage',
+  methods:{
+    backHandle(){
+      this.$router.replace('/');
+    }
+  }
 };
 </script>
 

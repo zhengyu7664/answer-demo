@@ -49,15 +49,15 @@
       </BeginButton> -->
       <div class="input-row">
         <div>姓名：</div>
-        <div class="input-wrap"><input v-model="form.name" type="text"></div>
+        <div class="input-wrap"><input v-model="form.name"  @blur="blurHandle" type="text"></div>
       </div>
       <div class="input-row">
         <div>手机：</div>
-        <div class="input-wrap"><input v-model="form.phone" type="text"></div>
+        <div class="input-wrap"><input v-model="form.phone"  @blur="blurHandle" type="text"></div>
       </div>
       <div class="input-row">
         <div>单位：</div>
-        <div class="input-wrap"><input v-model="form.section" type="text"></div>
+        <div class="input-wrap"><input v-model="form.section" @blur="blurHandle"  type="text"></div>
       </div>
       <BeginButton
         class="normal-btn"
@@ -130,6 +130,26 @@ export default {
     };
   },
   methods: {
+    blurHandle(){
+      let ua = window.navigator.userAgent;
+      if (!!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) {
+          //$alert('ios端');
+         
+              var currentPosition, timer;
+              var speed = 1;
+              timer = setInterval(function () {
+                  currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+                  currentPosition -= speed;
+                  window.scrollTo(0, currentPosition); //页面向上滚动
+                  currentPosition += speed;
+                  window.scrollTo(0, currentPosition); //页面向下滚动
+                  clearInterval(timer);
+              }, 100);
+          
+      } else if (ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1) {
+          // console.log('安卓正常')
+      }
+    },
     play(type) {
       // switch (type) {
       //   case 'normal':
